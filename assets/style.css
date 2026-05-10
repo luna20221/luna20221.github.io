@@ -2,7 +2,7 @@
 :root{
   --bg:#0f172a; --bg2:#13203a; --panel:#ffffff; --text:#0f172a; --muted:#475569; --line:#e2e8f0;
   --brand:#1d4ed8; --brand2:#163a8c; --cta:#f59e0b; --cta2:#d97706; --soft:#f8fafc; --green:#25D366;
-  --shadow:0 18px 50px rgba(15,23,42,.10); --radius:22px; --max:1180px;
+  --shadow:0 18px 50px rgba(15,23,42,.10); --radius:22px; --max:1440px;
 }
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
 img{max-width:100%;display:block} a{text-decoration:none;color:inherit} .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
@@ -203,9 +203,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-f
 .quote-copy{
   color:#fff;
   max-width:600px;
-  background:transparent;
-  border-radius:0;
-  padding:0;
+  background:linear-gradient(135deg,rgba(15,23,42,.96),rgba(23,53,109,.92));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:24px;
   box-shadow:none;
   position:relative;
   z-index:2;
@@ -333,6 +334,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-f
   .mobile-quote-section .quote-copy{
     color:#0f172a;
     max-width:none;
+    background:transparent;
+    border:0;
+    border-radius:0;
     padding:0;
   }
   .mobile-quote-section .quote-kicker{
@@ -396,4 +400,3 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-f
   .service-cards,.home-town-grid,.coverage-strip{grid-template-columns:1fr!important}
   .service-card,.service-card:nth-child(4),.service-card:nth-child(5),.service-card:nth-child(6){grid-column:auto!important}
 }
-
