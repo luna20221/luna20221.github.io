@@ -431,8 +431,18 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-f
     max-width:460px;
     width:100%;
   }
-  .mobile-quote-section{
-    display:none!important;
+  .mobile-quote-section.quote-section{
+    display:block!important;
+    padding:72px 0!important;
+  }
+  .quote-section:before{
+    display:block!important;
+  }
+  .quote-layout{
+    display:grid!important;
+    grid-template-columns:.9fr 1.1fr!important;
+    gap:34px!important;
+    align-items:center!important;
   }
   .service-cards{
     grid-template-columns:repeat(6,minmax(0,1fr))!important;
@@ -456,5 +466,28 @@ header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.94);backdrop-f
   }
   .hero .desktop-quote{
     max-width:480px;
+  }
+  .quote-section:before{
+    width:min(68vw,1100px)!important;
+  }
+  .quote-layout{
+    grid-template-columns:.86fr 1.14fr!important;
+  }
+}
+
+@media(min-width:821px) and (max-width:1100px){
+  .mobile-quote-section.quote-section{
+    display:block!important;
+    background:linear-gradient(180deg,#0f172a 0%,#17356d 46%,#f8fafc 46%,#f8fafc 100%)!important;
+  }
+  .quote-section:before{
+    display:none!important;
+  }
+  .quote-layout{
+    grid-template-columns:1fr!important;
+    gap:28px!important;
+  }
+  .quote-copy{
+    max-width:760px!important;
   }
 }
